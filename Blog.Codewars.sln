@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.Codewars.Function", "Blog.Codewars.Function\Blog.Codewars.Function.csproj", "{BF2206E5-9379-4053-83D2-88D5A873036B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blog.Codewars.Generator", "Blog.Codewars.Generator\Blog.Codewars.Generator.csproj", "{0BEEB7BD-7421-4E62-A091-B3D7F4CDFECE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF2206E5-9379-4053-83D2-88D5A873036B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF2206E5-9379-4053-83D2-88D5A873036B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF2206E5-9379-4053-83D2-88D5A873036B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF2206E5-9379-4053-83D2-88D5A873036B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0BEEB7BD-7421-4E62-A091-B3D7F4CDFECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0BEEB7BD-7421-4E62-A091-B3D7F4CDFECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0BEEB7BD-7421-4E62-A091-B3D7F4CDFECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0BEEB7BD-7421-4E62-A091-B3D7F4CDFECE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E85F9B4E-7AFC-4C6F-AA9E-8344265BC406}
+	EndGlobalSection
+EndGlobal

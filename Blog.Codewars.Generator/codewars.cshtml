@@ -1,0 +1,101 @@
+﻿@model Blog.Codewars.Generator.Model
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Codewars!</title>
+    <link rel="stylesheet" href="https://www.codewars.com/assets/application-776f7eebc122613f70443dfee33518104673ba7dced96422ca993601702f6456.css">
+    <style>
+        table td {
+            border-bottom: none;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            line-height: normal;
+            padding: 0px;
+            padding-right: 10px;
+        }
+        td.fitwidth {
+            width: 1px;
+            white-space: nowrap;
+        }
+        div.minitag {
+            line-height: normal;
+            font-size: 9px;
+            margin: 0px
+        }
+        .tight {
+            line-height: normal;
+            margin-top: 4px;
+            margin-bottom: 0px;
+        }
+        .tight-last {
+            line-height: normal;
+            margin-top: 4px;
+            margin-bottom: 8px;
+        }
+        .tagrow {
+            margin-bottom: 8px;
+            margin-top: -2px
+        }
+    </style>
+</head>
+<body style="background-color: white;padding-top: 0px">
+    <h2 class="tight">Honor: @Model.Honor</h2>
+    <h3 class="tight-last">Showing @Model.Completions.Count() of @Model.TotalCompleted completed kata</h3>
+    <table style="width: 100%;background-color: white;">
+        <tbody>
+            @foreach (var item in @Model.Completions)
+            {
+                <tr>
+                    <td class="fitwidth" style="border-bottom: none;">
+                        <p class="tight">@item.Date.ToString("yyyy-MM-dd")</p>
+                    </td>
+                    <td>
+                        <a href="@item.Uri" target="_blank"><h5 class="tight">@item.Name</h5></a>
+                    </td>
+                    <td class="fitwidth" rowspan="2" >
+                        @if (@item.Language == "csharp")
+                        {
+                            <img src="https://ian.bebbs.co.uk/Content/csharp.png" style="max-width: 32px; margin-top: -6px" />
+                        }
+                        else
+                        {
+                            <img src="https://ian.bebbs.co.uk/Content/fsharp.png" style="max-width: 32px; margin-top: -6px" />
+                        }
+                    </td>
+                    <td class="fitwidth" rowspan="2">
+                        @{
+                            switch (item.Colour)
+                            {
+                                case "white":
+                            <div class="small-hex is-extra-wide is-inline mr-15px is-white-rank"><div class="inner-small-hex is-extra-wide "><span>@item.Ktu</span></div></div>
+                                    break;
+                                case "yellow":
+                            <div class="small-hex is-extra-wide is-inline mr-15px is-yellow-rank"><div class="inner-small-hex is-extra-wide "><span>@item.Ktu</span></div></div>
+                                    break;
+                                case "blue":
+                            <div class="small-hex is-extra-wide is-inline mr-15px is-blue-rank"><div class="inner-small-hex is-extra-wide "><span>@item.Ktu</span></div></div>
+                                    break;
+                                case "purple":
+                            <div class="small-hex is-extra-wide is-inline mr-15px is-purple-rank"><div class="inner-small-hex is-extra-wide "><span>@item.Ktu</span></div></div>
+                                    break;
+                            }
+                        }
+                    </td>
+                </tr>
+                <tr class="bottom-margin">
+                    <td colspan="2">
+                        <div class="mt-15px tagrow">
+                            @foreach (var tag in @item.Tags)
+                            {
+                            <div class="keyword-tag minitag tight">@tag</div>
+                            }
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>
